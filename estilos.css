@@ -12,14 +12,14 @@ html{
   box-sizing: border-box;
 }
 .contenedor{
-  height: 500px;
+  height: 200px;
   width: 100%;
   position: absolute;
-  top: 80px;  
+  top: 100px; 
 }
 .logo{
-  width: 700px;
-  height: 420px;
+  width: 400px;
+  height: 220px;
   position: absolute;
   margin: auto;
   left: 0;
@@ -28,10 +28,12 @@ html{
   bottom: 0;
 }
 nav{
-  background-color: #21c2df;
+  background: url(fotos/atardecer.jpg);
+  background-size: cover;
+  background-position: left;
   position: relative;
   top: 0px;
-  height: 60px;
+  height: 80px;
 }
 nav ul{
     width:100%;
@@ -50,19 +52,18 @@ nav a{
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 100;
   text-decoration: none;
-  line-height: 50px;
+  line-height: 70px;
   font-size: 30px;
   margin: 50px;
   letter-spacing: 2px;
   font-weight: bold;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   transition: 0.5s;
   text-shadow: 4px 4px 5px rgba(0,0,0,0.6);
 }
 nav a:hover{
-  border-bottom: 1px solid rgb(171, 171, 171);
+  border-bottom: 1px solid rgb(255, 0, 0);
   color: rgb(0, 0, 0);
-  background-color: rgba(141, 141, 141, 0.541);
   border-radius: 6px;
   transition: 0.2s;
   letter-spacing: 6px;
@@ -70,18 +71,18 @@ nav a:hover{
 }
 .galeria{
   position: relative;
-  top: 500px;
+  top: 360px;
   width: 100%;
+  margin-top: -70px;
   background-image: url(fotos/WhitePaper.jpg);
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'open sans';
 }
 .textopresentacion  {
   width: 100%;
-  height: 460px;
+  height: 400px;
   position: relative;
-  top: 500px;
+  top: 250px;
   background-image: url(fotos/atardecer.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -106,12 +107,14 @@ nav a:hover{
   width: fit-content;
   border-radius: 25px;
   font-size: 55px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(3px);
   font-family: 'Shadows Into Light', cursive;
 }
                  /*contenedor de fotos*/
 
 .contenedor-imagenes{
+  position: relative;
+  top: -10px;
   display:flex;
   width: 100%;
   margin: auto;
@@ -152,11 +155,10 @@ nav a:hover{
 }
 footer{
   position: relative;
-  top: 650px;
-  background-image: url(fotos/oilseed2.jpg);
+  top: 400px;
+  background-image: url(fotos/abstract\ white.jpg);
   background-size: cover;
-  background-position: left;
-  height: 250px;
+  height: 350px;
 }
 footer li{
   position: relative;
@@ -165,7 +167,7 @@ footer li{
   letter-spacing: 4px;
   margin: 10px;
   list-style-type: none;
-  color: #ffffff;
+  color: #8d1313;
   width: fit-content;
 }
 footer h3{
@@ -173,13 +175,13 @@ footer h3{
   position: absolute;
   left: 70px;
   top: 30px;
-  color: #ffffff;
+  color: #581212;
   font-weight: 100;
   letter-spacing: 5px;
   font-size: 35px;
 }
 footer i{
-  color: #ffffff;
+  color: #852222;
   position: relative;
   left: -15px;
 }
@@ -189,15 +191,39 @@ footer i{
   top:-10px;
   width: 250px;
   height: 130px;
-  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.757));
+}
+
+
+hr{
+  width: 85%;
+  border: 0;
+  border-bottom: 1px solid rgb(179, 179, 179);
+  margin: -10px auto;
+  position: relative;
+  top: 50px;
+}
+
+.copyright{
+  color: #797979;
+  width: fit-content;
+  margin: -10px auto;
+  position: relative;
+  top: 60px;
   
 }
+.copyright a{
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+
 
 /*--------------medias query-------------------*/
 
 @media (max-width:1024px){
   .logo{
-    width: 80%;
+    width: 40%;
     height: 90%;
     margin-top: 5px;
     }
@@ -254,14 +280,23 @@ footer i{
 @media (max-width:480px){
 
 .textopresentacion{
-    height: 600px;
+    height: 500px;
     position: relative;
-    top: 400px;
+    top: 200px;
+    
 }
+.mitexto{
+  font-size: small;
+  color: rgb(255, 0, 191);
+}
+
 
 .logo{
     position: relative;
-    left: 40px;
+    left: 100px;
+    top: -60px;
+    z-index: 5;
+  
     
     }
   .imagen img{
@@ -285,7 +320,10 @@ footer i{
   .mitexto h2{
     width: 80%;
     height: 40%;
-    font-size: 27px;
+    font-size: 22px;
+    height: 200px;
+    position: absolute;
+    right: 30px;
   }
 .contenedor-imagenes{
       width:100%;
@@ -305,28 +343,98 @@ footer i{
 
 }
 
+
+
+.seleccion{
+  position: relative;
+  top: 200px;
+  color: brown;
+}
+
+
+
+
+
+
+
+
+
+
+
   footer{
     width: 100%;
     font-size: 10px;
     font-weight: 100;
     }
   footer li{
-  width: 90%;
-  position: relative;
-  left: 25px;
-  top: 130px;
-  font-size: 13px;
-  letter-spacing: 5px;
+    width: 90%;
+    position: relative;
+    left: 25px;
+    top: 130px;
+    font-size: 13px;
+    letter-spacing: 5px;
   }
+
 .logofooter{
       display: none;
     }
 footer h3{
       position: relative;
       left: 28px;
-      font-size: 25px;
+      font-size: 23px;
     }
+
+    .copyright{
+      position: relative;
+      top: 170px;
+    }
+    hr{
+      position: relative;
+      top: 150px;
+    }
+
+ }
+
+ .lonuevo h2 {
+  color: blueviolet;
+ }
+
+
+
+ .slider{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  top: 250px;
+}
+
+.slider .slider-track{
+  display: flex;
+  animation: scroll 70s linear infinite;
+  width: calc(500px * 14);
+  height: 175px;
+}
+.slider .slide{
+  width: 200px;
+  margin: 50px;
+}
+
+.slider .slide img{
+  width: 100%;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translatex(0)
   }
+
+  100% {
+      transform: translatex(calc(-200px * 7));
+  }
+  
+}
 
 
 
